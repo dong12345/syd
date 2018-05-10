@@ -1,0 +1,10 @@
+D:\代码\测试\JSBYG\JSBYG_Model\bin\Debug\JSBYG_Model.dll
+D:\代码\测试\JSBYG\JSBYG_Model\bin\Debug\JSBYG_Model.pdb
+D:\代码\测试\JSBYG\JSBYG_Model\obj\Debug\JSBYG_Model.dll
+D:\代码\测试\JSBYG\JSBYG_Model\obj\Debug\JSBYG_Model.pdb
+F:\代码\JSBYG\JSBYG_Model\bin\Debug\JSBYG_Model.dll
+F:\代码\JSBYG\JSBYG_Model\bin\Debug\JSBYG_Model.pdb
+F:\代码\JSBYG\JSBYG_Model\obj\Debug\JSBYG_Model.csprojResolveAssemblyReference.cache
+F:\代码\JSBYG\JSBYG_Model\obj\Debug\JSBYG_Model.dll
+F:\代码\JSBYG\JSBYG_Model\obj\Debug\JSBYG_Model.pdb
+D:\代码\测试\JSBYG\JSBYG_Model\obj\Debug\JSBYG_Model.csprojResolveAssemblyReference.cache

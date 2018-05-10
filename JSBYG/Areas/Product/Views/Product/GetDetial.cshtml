@@ -1,0 +1,202 @@
+﻿@model JSBYG.Areas.Product.Models.ProductVM
+@{
+    ViewBag.Title = "GetDetial";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = null;
+}
+<link href="~/layui/css/layui.css" rel="stylesheet" />
+
+@*后台获取方式得到详情*@
+<body>
+    <div class="wrap-container">
+        <form class="layui-form" style="width: 90%;padding-top: 20px;">
+
+            <input type="hidden" name="Id"  value='@Model.Id'/>
+            <div class="layui-form-item">
+                <label class="layui-form-label">产品名称：</label>
+                <div class="layui-input-block">
+                    <input type="text" name="Name" required lay-verify="required" placeholder="请输入产品名称" autocomplete="off" class="layui-input" value='@Model.Name'>
+                </div>
+
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">产品说明：</label>
+                <div class="layui-input-block">
+                    <textarea placeholder="请输入产品说明" class="layui-textarea" name="Recommend">@Model.Recommend</textarea>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">单位：</label>
+                <div class="layui-input-block">
+                    <input type="text" name="Unit" required lay-verify="required" placeholder="请输入产品单位" autocomplete="off" class="layui-input" value='@Model.Unit'>
+                </div>
+
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">价格：</label>
+                <div class="layui-input-block">
+                    <input type="text" name="UnitPrice" required lay-verify="required" placeholder="请输入产品价格" autocomplete="off" class="layui-input" value='@Model.UnitPrice'>
+                </div>
+
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">产品总数量：</label>
+                <div class="layui-input-block">
+                    <input type="text" name="TotalCount" required lay-verify="required" placeholder="请输入产品总数量" autocomplete="off" class="layui-input" value='@Model.TotalCount'>
+                </div>
+
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">产品图片：</label>
+                <div class="layui-input-block">
+                    <input type="text" name="Image" required lay-verify="required" placeholder="请输入图片地址" autocomplete="off" class="layui-input" value='@Model.Image'>
+                </div>
+
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn layui-btn-normal" lay-submit lay-filter="formDemo">立即提交</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="~/layui/layui.js"></script>
+    <script>
+        //Demo
+        layui.use(['form','layer'], function () {
+            var form = layui.form,
+                layer=layui.layer,
+                $ = layui.$;
+            form.render();
+
+            //监听提交
+            form.on('submit(formDemo)', function (data) {
+                debugger;
+                //layer.msg(JSON.stringify(data.field));
+                $.ajax({
+                    url: '/Product/Product/Edit',
+                    type: 'post',
+                    contentType: "application/json", //必须有
+                    data: JSON.stringify(data.field),
+                    success: function (data)
+                    {
+                        if (data)
+                        {
+                            layer.msg(data.message, {
+                                time:1000
+                            }, function () {
+                                parent.layer.closeAll();
+                                parent.location.reload();
+                            })
+                        }
+                    },
+                    error: function () {
+                        layer.msg("发生错误");
+                    }
+                })
+                return false;
+            });
+        });
+    </script>
+</body>
+
+
+
+
+
+@*js缓存形式获取详情*@
+@*<body>
+    <div class="wrap-container">
+        <form class="layui-form" style="width: 90%;padding-top: 20px;">
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">产品名称：</label>
+                <div class="layui-input-block">
+                    <input type="text" name="Name" required lay-verify="required" placeholder="请输入产品名称" autocomplete="off" class="layui-input" value='@Model.Name'>
+                </div>
+
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">产品说明：</label>
+                <div class="layui-input-block">
+                    <textarea placeholder="请输入产品说明" class="layui-textarea" name="Recommend">@Model.Recommend</textarea>
+                </div>
+                s
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">单位：</label>
+                <div class="layui-input-block">
+                    <input type="text" name="Unit" required lay-verify="required" placeholder="请输入产品单位" autocomplete="off" class="layui-input" value='@Model.Unit'>
+                </div>
+
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">价格：</label>
+                <div class="layui-input-block">
+                    <input type="text" name="UnitPrice" required lay-verify="required" placeholder="请输入产品价格" autocomplete="off" class="layui-input" value='@Model.UnitPrice'>
+                </div>
+
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">产品总数量：</label>
+                <div class="layui-input-block">
+                    <input type="text" name="TotalCount" required lay-verify="required" placeholder="请输入产品总数量" autocomplete="off" class="layui-input" value='@Model.TotalCount'>
+                </div>
+
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">产品图片：</label>
+                <div class="layui-input-block">
+                    <input type="text" name="Image" required lay-verify="required" placeholder="请输入图片地址" autocomplete="off" class="layui-input" value='@Model.Image'>
+                </div>
+
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn layui-btn-normal" lay-submit lay-filter="formDemo">立即提交</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="~/layui/layui.js"></script>
+    <script>
+        //Demo
+        layui.use(['form'], function () {
+            debugger;
+            var form = layui.form,
+                $ = layui.$;
+            form.render();
+
+            var product = JSON.parse(window.localStorage.product);
+
+            for (var pro in product) {
+                switch (pro) {
+                    case "Name":
+                        debugger;
+                        break;
+                }
+            }
+
+
+            $("input.layui-input").each(function () {
+                var name = $(this).attr("name");
+                $("input[name='" + name + "']").val(product[name]);
+            })
+
+            $("textarea.layui-textarea").html(product.Recommend);
+
+
+            //监听提交
+            form.on('submit(formDemo)', function (data) {
+                layer.msg(JSON.stringify(data.field));
+                return false;
+            });
+        });
+    </script>
+</body>*@

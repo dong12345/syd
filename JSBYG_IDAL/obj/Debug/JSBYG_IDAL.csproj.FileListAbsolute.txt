@@ -1,0 +1,10 @@
+D:\代码\测试\JSBYG\JSBYG_IDAL\bin\Debug\JSBYG_IDAL.dll
+D:\代码\测试\JSBYG\JSBYG_IDAL\bin\Debug\JSBYG_IDAL.pdb
+D:\代码\测试\JSBYG\JSBYG_IDAL\obj\Debug\JSBYG_IDAL.dll
+D:\代码\测试\JSBYG\JSBYG_IDAL\obj\Debug\JSBYG_IDAL.pdb
+F:\代码\JSBYG\JSBYG_IDAL\bin\Debug\JSBYG_IDAL.dll
+F:\代码\JSBYG\JSBYG_IDAL\bin\Debug\JSBYG_IDAL.pdb
+F:\代码\JSBYG\JSBYG_IDAL\obj\Debug\JSBYG_IDAL.csprojResolveAssemblyReference.cache
+F:\代码\JSBYG\JSBYG_IDAL\obj\Debug\JSBYG_IDAL.dll
+F:\代码\JSBYG\JSBYG_IDAL\obj\Debug\JSBYG_IDAL.pdb
+D:\代码\测试\JSBYG\JSBYG_IDAL\obj\Debug\JSBYG_IDAL.csprojResolveAssemblyReference.cache
