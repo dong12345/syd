@@ -8,3 +8,8 @@ F:\代码\JSBYG\JSBYG_IDAL\obj\Debug\JSBYG_IDAL.csprojResolveAssemblyReference.c
 F:\代码\JSBYG\JSBYG_IDAL\obj\Debug\JSBYG_IDAL.dll
 F:\代码\JSBYG\JSBYG_IDAL\obj\Debug\JSBYG_IDAL.pdb
 D:\代码\测试\JSBYG\JSBYG_IDAL\obj\Debug\JSBYG_IDAL.csprojResolveAssemblyReference.cache
+C:\Users\DJ\Desktop\5555\JSBYG_IDAL\bin\Debug\JSBYG_IDAL.dll
+C:\Users\DJ\Desktop\5555\JSBYG_IDAL\bin\Debug\JSBYG_IDAL.pdb
+C:\Users\DJ\Desktop\5555\JSBYG_IDAL\obj\Debug\JSBYG_IDAL.csprojResolveAssemblyReference.cache
+C:\Users\DJ\Desktop\5555\JSBYG_IDAL\obj\Debug\JSBYG_IDAL.dll
+C:\Users\DJ\Desktop\5555\JSBYG_IDAL\obj\Debug\JSBYG_IDAL.pdb
